@@ -1,0 +1,322 @@
+{
+  "language": "python",
+  "topics": [
+    {
+      "id": "py-basics",
+      "name": "Python Basics",
+      "order": 1,
+      "subtopics": ["Variables", "Data Types", "Lists & Tuples", "Dictionaries", "Strings"]
+    },
+    {
+      "id": "py-functions",
+      "name": "Functions",
+      "order": 2,
+      "subtopics": ["Basic Functions", "Arguments", "Lambda", "Decorators"]
+    },
+    {
+      "id": "py-oop",
+      "name": "Object Oriented Programming",
+      "order": 3,
+      "subtopics": ["Classes & Objects", "Inheritance", "Polymorphism", "Dunder Methods"]
+    },
+    {
+      "id": "py-advanced",
+      "name": "Advanced Python",
+      "order": 4,
+      "subtopics": ["Generators", "Async", "Type Hints", "Context Managers"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-py-1",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Lists & Tuples",
+      "difficulty": "beginner",
+      "type": "mcq",
+      "question": "Which of the following is true about lists and tuples in Python?",
+      "options": [
+        "Lists are immutable, tuples are mutable",
+        "Lists are mutable, tuples are immutable",
+        "Both are mutable",
+        "Both are immutable"
+      ],
+      "answer": "Lists are mutable, tuples are immutable",
+      "explanation": "Lists can be modified after creation (mutable), whereas tuples cannot be changed once created (immutable).",
+      "tags": ["basics", "data-structures"]
+    },
+    {
+      "id": "q-py-2",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Dictionaries",
+      "difficulty": "beginner",
+      "type": "output_guess",
+      "question": "What is the output of the following code?",
+      "code": "d = {'a': 1, 'b': 2}\nprint(d.get('c', 3))",
+      "answer": "3",
+      "explanation": "The get() method returns the value for the specified key if key is in dictionary. If not, it returns the default value provided as the second argument.",
+      "hint": "What does the second argument to .get() do?",
+      "tags": ["basics", "dictionaries"]
+    },
+    {
+      "id": "q-py-3",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Strings",
+      "difficulty": "beginner",
+      "type": "code_fill",
+      "question": "Fill in the blank to convert the string to uppercase.",
+      "code": "text = 'hello'\nprint(text.____())",
+      "answer": "upper",
+      "explanation": "The upper() string method returns a new string with all characters in uppercase.",
+      "tags": ["basics", "strings"]
+    },
+    {
+      "id": "q-py-4",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Variables",
+      "difficulty": "beginner",
+      "type": "debug",
+      "question": "Identify the invalid variable name definition.",
+      "code": "1st_name = 'John'\nlast_name = 'Doe'\n_age = 25\nName2 = 'Jane'",
+      "options": [
+        "1st_name = 'John'",
+        "last_name = 'Doe'",
+        "_age = 25",
+        "Name2 = 'Jane'"
+      ],
+      "answer": "1st_name = 'John'",
+      "explanation": "Variable names in Python cannot start with a number.",
+      "tags": ["basics", "variables"]
+    },
+    {
+      "id": "q-py-5",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Lists & Tuples",
+      "difficulty": "intermediate",
+      "type": "output_guess",
+      "question": "What is the output of this list slicing?",
+      "code": "nums = [10, 20, 30, 40, 50]\nprint(nums[::-1])",
+      "answer": "[50, 40, 30, 20, 10]",
+      "explanation": "Using a step of -1 slices the list in reverse order.",
+      "tags": ["basics", "lists"]
+    },
+    {
+      "id": "q-py-6",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Data Types",
+      "difficulty": "beginner",
+      "type": "concept",
+      "question": "What data type is the result of 10 / 2 in Python 3?",
+      "options": [
+        "int",
+        "float",
+        "double",
+        "string"
+      ],
+      "answer": "float",
+      "explanation": "In Python 3, the / operator always returns a float (e.g., 5.0). For integer division, you use //.",
+      "tags": ["basics", "datatypes"]
+    },
+    {
+      "id": "q-py-7",
+      "language": "python",
+      "topic": "py-functions",
+      "subtopic": "Basic Functions",
+      "difficulty": "intermediate",
+      "type": "code_fill",
+      "question": "Fill in the blank to complete the function that returns the square of a number.",
+      "code": "def square(n):\n    return n ___ 2",
+      "answer": "**",
+      "explanation": "The ** operator is used for exponentiation in Python.",
+      "tags": ["functions", "operators"]
+    },
+    {
+      "id": "q-py-8",
+      "language": "python",
+      "topic": "py-functions",
+      "subtopic": "Lambda",
+      "difficulty": "intermediate",
+      "type": "output_guess",
+      "question": "What is the output of the following lambda function applied to a list?",
+      "code": "nums = [1, 2, 3]\nres = list(map(lambda x: x * 2, nums))\nprint(res)",
+      "answer": "[2, 4, 6]",
+      "explanation": "The map function applies the lambda to each element, multiplying it by 2.",
+      "tags": ["functions", "lambda"]
+    },
+    {
+      "id": "q-py-9",
+      "language": "python",
+      "topic": "py-functions",
+      "subtopic": "Decorators",
+      "difficulty": "advanced",
+      "type": "concept",
+      "question": "What is a decorator in Python?",
+      "options": [
+        "A class that inherits from another class",
+        "A function that takes another function and extends its behavior without explicitly modifying it",
+        "A module that provides UI components",
+        "A special variable that holds state"
+      ],
+      "answer": "A function that takes another function and extends its behavior without explicitly modifying it",
+      "explanation": "Decorators wrap a function, modifying its behavior. They are often used for logging, access control, etc.",
+      "tags": ["functions", "decorators", "concept"]
+    },
+    {
+      "id": "q-py-10",
+      "language": "python",
+      "topic": "py-functions",
+      "subtopic": "Arguments",
+      "difficulty": "intermediate",
+      "type": "debug",
+      "question": "Which function definition is syntaxically incorrect?",
+      "options": [
+        "def func(a, b=1):",
+        "def func(a=1, b):",
+        "def func(*args, **kwargs):",
+        "def func(a, *args):"
+      ],
+      "answer": "def func(a=1, b):",
+      "explanation": "Non-default arguments cannot follow default arguments in a function definition.",
+      "tags": ["functions", "arguments"]
+    },
+    {
+      "id": "q-py-11",
+      "language": "python",
+      "topic": "py-oop",
+      "subtopic": "Classes & Objects",
+      "difficulty": "intermediate",
+      "type": "debug",
+      "question": "Identify the bug in the following code. Which line needs to be fixed?",
+      "code": "class Dog:\n    def __init__(name):\n        self.name = name",
+      "options": [
+        "class Dog:",
+        "def __init__(name):",
+        "self.name = name"
+      ],
+      "answer": "def __init__(name):",
+      "explanation": "Instance methods in Python classes must have 'self' as the first parameter: def __init__(self, name):",
+      "tags": ["oop", "classes", "debug"]
+    },
+    {
+      "id": "q-py-12",
+      "language": "python",
+      "topic": "py-oop",
+      "subtopic": "Dunder Methods",
+      "difficulty": "advanced",
+      "type": "mcq",
+      "question": "Which dunder method is called when the str() function is applied to an object?",
+      "options": [
+        "__repr__",
+        "__string__",
+        "__str__",
+        "__format__"
+      ],
+      "answer": "__str__",
+      "explanation": "The __str__ method is meant to return a readable string representation of the object.",
+      "tags": ["oop", "dunder"]
+    },
+    {
+      "id": "q-py-13",
+      "language": "python",
+      "topic": "py-oop",
+      "subtopic": "Inheritance",
+      "difficulty": "intermediate",
+      "type": "code_fill",
+      "question": "Fill in the blank to call the parent class's __init__ method.",
+      "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        ____().__init__(name)\n        self.breed = breed",
+      "answer": "super",
+      "explanation": "The super() function returns a proxy object that delegates method calls to a parent or sibling class.",
+      "tags": ["oop", "inheritance"]
+    },
+    {
+      "id": "q-py-14",
+      "language": "python",
+      "topic": "py-advanced",
+      "subtopic": "Generators",
+      "difficulty": "advanced",
+      "type": "ordering",
+      "question": "Order the steps to create and use a simple generator.",
+      "options": [
+        "def my_gen():",
+        "    yield 1",
+        "g = my_gen()",
+        "next(g)"
+      ],
+      "answer": ["def my_gen():", "    yield 1", "g = my_gen()", "next(g)"],
+      "explanation": "First define the function, use yield inside it, instantiate the generator, and finally call next() to get the yielded value.",
+      "tags": ["advanced", "generators"]
+    },
+    {
+      "id": "q-py-15",
+      "language": "python",
+      "topic": "py-advanced",
+      "subtopic": "Context Managers",
+      "difficulty": "intermediate",
+      "type": "mcq",
+      "question": "Which statement is primarily used to wrap the execution of a block with methods defined by a context manager?",
+      "options": [
+        "try...except",
+        "with",
+        "yield",
+        "import"
+      ],
+      "answer": "with",
+      "explanation": "The 'with' statement simplifies exception handling by encapsulating common preparation and cleanup tasks (e.g., opening and closing files).",
+      "tags": ["advanced", "context-managers"]
+    },
+    {
+      "id": "q-py-16",
+      "language": "python",
+      "topic": "py-advanced",
+      "subtopic": "Type Hints",
+      "difficulty": "advanced",
+      "type": "output_guess",
+      "question": "Consider this type hint: def greet(name: str) -> str: return 'Hi ' + name. If we call greet(123), what does Python do at runtime?",
+      "options": [
+        "Throws a TypeError",
+        "Throws a ValueError",
+        "Returns 'Hi 123' after throwing a warning",
+        "Throws a TypeError because you can't concatenate str and int"
+      ],
+      "answer": "Throws a TypeError because you can't concatenate str and int",
+      "explanation": "Type hints in Python are not enforced at runtime. The function runs, but adding a string ('Hi ') and an int (123) throws a TypeError.",
+      "tags": ["advanced", "types"]
+    },
+    {
+      "id": "q-py-17",
+      "language": "python",
+      "topic": "py-basics",
+      "subtopic": "Lists & Tuples",
+      "difficulty": "intermediate",
+      "type": "concept",
+      "question": "LeetCode Easy: You need to check if a list contains any duplicate elements. Which built-in data structure is most efficient to cast the list to?",
+      "options": [
+        "tuple",
+        "dict",
+        "set",
+        "frozenset"
+      ],
+      "answer": "set",
+      "explanation": "Converting a list to a set removes duplicates. You can then compare the length of the set to the length of the list to efficiently check for duplicates.",
+      "tags": ["basics", "leetcode"]
+    },
+    {
+      "id": "q-py-18",
+      "language": "python",
+      "topic": "py-functions",
+      "subtopic": "Basic Functions",
+      "difficulty": "advanced",
+      "type": "output_guess",
+      "question": "LeetCode Two Sum: What will be the output of this logic?",
+      "code": "nums = [2, 7, 11, 15]\ntarget = 9\nseen = {}\nfor i, num in enumerate(nums):\n    if target - num in seen:\n        print([seen[target - num], i])\n    seen[num] = i",
+      "answer": "[0, 1]",
+      "explanation": "When num is 7 (index 1), target - num is 2. 2 is already in 'seen' with index 0. So it prints [0, 1].",
+      "tags": ["functions", "leetcode"]
+    }
+  ]
+}
